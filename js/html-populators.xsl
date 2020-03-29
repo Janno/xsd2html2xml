@@ -170,7 +170,7 @@
 									button = childElement.parentElement.parentElement.parentElement.lastElementChild;
 								};
 								
-								if (button !== null &amp;&amp; childNode.nodeName === previousChildName) {
+								if (button !== null &amp;&amp; button !== undefined &amp;&amp; (childNode.nodeName === previousChildName || previousChildName == undefined &amp;&amp; childElement.parentElement.lastElementChild.nodeName.toLowerCase() === "button")) {
 									clickAddButton(button);
 									
 									parseNode(
